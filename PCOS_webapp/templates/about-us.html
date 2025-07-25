@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang=”en”>
+<head>
+    <meta charset=”UTF-8”>
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
+    <link rel='stylesheet', href="{{ url_for('static', filename='css/about-us.css') }}">
+    <title>About Us – PCOS Prediction Tool</title>
+</head>
+<body>
+    <div class="header">
+        <a href="pcos-home.html">
+            <div class="web-head">
+                <div class="logo-box">
+                    <img src="e436e2e93446c5da633a20e93fcce054.jpg" alt="" height="100px">
+                </div>
+                <div class="heading">
+                    <h2>About Us</h2>
+                </div>
+            </div>
+        </a>
+        
+        <div>
+            <ul>
+                <a href="{{ url_for('index') }}"><li>HOME</li></a>
+                <a href="{{ url_for('index') }}#form"><li>FORM</li></a>
+                <a href="https://www.healthline.com/health/polycystic-ovary-disease" target="_blank"><li>PCOS</li></a>
+                <a href="{{ url_for('about') }}"><li>ABOUT US</li></a>
+            </ul>
+        </div>
+        
+    </div>
+        
+    <div class="container">
+        <p>We are a team dedicated to empowering women with accessible information about their health. Recognizing the prevalence and potential impact of Polycystic Ovary Syndrome (PCOS), we developed this PCOS Prediction Tool to facilitate early awareness.</p>
+        <p>Our goal is to provide a user-friendly platform where individuals can input basic health-related information and receive a preliminary assessment of their potential risk for PCOS. We believe that increased awareness can encourage timely consultation with healthcare professionals, leading to earlier diagnosis, treatment, and improved quality of life for those affected by PCOS.</p>
+
+        <h3>Our Mission</h3>
+        <p>To empower women by providing an accessible tool for the early prediction of PCOS, thereby promoting proactive health management and informed decision-making.</p>
+
+        <h3>Our Vision</h3>
+        <p>To contribute to a future where women have the knowledge and resources to address hormonal health concerns effectively.</p>
+
+        <div class="note">
+            <strong>Important Note:</strong> This tool is intended for informational purposes only and should not be used as a substitute for professional medical advice, diagnosis, or treatment. Always seek the guidance of your physician or other qualified health provider with any questions you may have regarding a medical condition.
+        </div>
+
+        <p>We are continuously working to improve and refine this tool to better serve our users. We value your feedback and welcome any suggestions that can help us achieve our mission.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PCOS Prediction Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel='stylesheet', href="{{ url_for('static', filename='css/main.css') }}">
+  <base href="{{ url_for('static', filename='') }}">
+</head>
+<body>
+    <div class="header">
+        <a href="pcos-home.html">
+            <div class="web-head">
+                <div class="logo-box">
+                    <img src="images\e436e2e93446c5da633a20e93fcce054.jpg" alt="" height="100px">
+                </div>
+                <div class="heading">
+                    <h2>PCOS Detection</h2>
+                </div>
+            </div>
+        </a>
+        
+        <div>
+            <ul>
+              <li><a class="menu" href="{{ url_for('index') }}">HOME</a></li>
+              <li><a href="{{ url_for('index') }}#form">FORM</a></li>
+              <li><a href="https://www.healthline.com/health/polycystic-ovary-disease" target="_blank">PCOS</a></li>
+              <li><a href="{{ url_for('about') }}">ABOUT US</a></li>
+            </ul>
+        </div>
+        
+    </div>
+  <section>
+    <!-- <img src="https://www.kindpng.com/picc/m/180-1806159_polycystic-ovary-syndrome-pcos-hd-png-download.png" alt="PCOS Awareness Banner"> -->
+    <div class="box">
+        <div class="box-head">
+            <h3>Always Remenber</h3>
+        </div>
+        <div class="box-content">
+            <p>There is so much more to you than a PCOS diagnosis</p>
+        </div>
+        <div class="box-button">
+            <h5>Celebrate yourself</h5>
+        </div>
+    </div>
+    <div class="carousel-wrapper">
+        <h1 class="cards-head">💗You Should Know!💗</h1>
+        <div class="cards-container">
+          <div class="card"><img src="images\card1.jpg" alt="" height="200px"></div>
+          <div class="card"><img src="images\card2.jpg" alt="" height="200px"></div>
+          <div class="card"><img src="images\card3.jpg" alt="" height="200px"></div>
+          <div class="card"><img src="images\card4.jpg" alt="" height="200px"></div>
+          <div class="card"><img src="images\card5.jpg" alt="" height="200px"></div>
+        </div>
+      </div>
+    <h1 id="form">PCOS Prediction Tool</h1>
+    <p>
+      "Polycystic Ovary Syndrome (PCOS) is a hormonal disorder common among women of reproductive age. Early prediction and diagnosis can help in timely treatment and lifestyle changes. Please fill in the following details for PCOS prediction."
+    </p>
+  </section>
+
+  <h2 >PCOS Prediction Form</h2>
+
+  <div class="container">
+    <form method="POST">
+      {% for feature in model_features %}
+      <label>{{ feature }}</label><br>
+      <input type="number" name="{{ feature }}" step="any" required><br><br>
+      <!-- <div>
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" required />
+      </div>
+      <div>
+        <label for="weight">Weight (kg)</label>
+        <input type="number" id="weight" name="weight" required />
+      </div>
+      <div>
+        <label for="height">Height (cm)</label>
+        <input type="number" id="height" name="height" required />
+      </div>
+      <div>
+        <label for="blood_group">Blood Group</label>
+        <select id="blood_group" name="blood_group">
+          <option value="">Select</option>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+        </select>
+      </div>
+      <div class="full-width">
+        <label for="irregular_periods">Do you have irregular periods?</label>
+        <select id="irregular_periods" name="irregular_periods">
+          <option value="">Select</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+      <div><label for="input5">Input 5</label><input type="text" id="input5"></div>
+      <div><label for="input6">Input 6</label><input type="text" id="input6"></div>
+      <div><label for="input7">Input 7</label><input type="text" id="input7"></div>
+      <div><label for="input8">Input 8</label><input type="text" id="input8"></div>
+      <div><label for="input9">Input 9</label><input type="text" id="input9"></div>
+      <div><label for="input10">Input 10</label><input type="text" id="input10"></div>
+      <div><label for="input11">Input 11</label><input type="text" id="input11"></div>
+      <div><label for="input12">Input 12</label><input type="text" id="input12"></div>
+      <div><label for="input13">Input 13</label><input type="text" id="input13"></div>
+      <div><label for="input14">Input 14</label><input type="text" id="input14"></div>
+      <div><label for="input15">Input 15</label><input type="text" id="input15"></div>
+      <div><label for="input16">Input 16</label><input type="text" id="input16"></div>
+      <div><label for="input17">Input 17</label><input type="text" id="input17"></div>
+      <div><label for="input18">Input 18</label><input type="text" id="input18"></div>
+      <div><label for="input19">Input 19</label><input type="text" id="input19"></div>
+      <div><label for="input20">Input 20</label><input type="text" id="input20"></div>
+      <div><label for="input21">Input 21</label><input type="text" id="input21"></div>
+      <div><label for="input22">Input 22</label><input type="text" id="input22"></div>
+      <div><label for="input23">Input 23</label><input type="text" id="input23"></div>
+      <div><label for="input24">Input 24</label><input type="text" id="input24"></div>
+      <div><label for="input25">Input 25</label><input type="text" id="input25"></div>
+      <div><label for="input26">Input 26</label><input type="text" id="input26"></div> -->
+      {% endfor %}
+      <button type="submit">Submit for Prediction</button>
+    </form>
+    {% if prediction %}
+    <h2>Result: {{ prediction }}</h2>
+    <p>Probability of PCOS: {{ prob }}</p>
+    {% endif %}
+
+    {% if error %}
+    <p style="color:red;">{{ error }}</p>
+    {% endif %}
+  </div>
+</body>
+</html>
